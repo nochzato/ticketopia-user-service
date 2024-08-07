@@ -33,9 +33,9 @@ migratedown1:
 	migrate -path internal/db/migration -database "postgresql://postgres:postgres@localhost:5432/ticketopia-user-service?sslmode=disable" -verbose down 1
 
 proto:
-	rm -f internal/pb/*.go
-	protoc --proto_path=proto --go_out=internal/pb --go_opt=paths=source_relative \
-	--go-grpc_out=internal/pb --go-grpc_opt=paths=source_relative \
+	rm -f pkg/pb/*.go
+	protoc --proto_path=proto --go_out=pkg/pb --go_opt=paths=source_relative \
+	--go-grpc_out=pkg/pb --go-grpc_opt=paths=source_relative \
 	proto/user/v1/*.proto
 
 .PHONY: all build run test clean migratedown migratedown1 proto

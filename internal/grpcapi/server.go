@@ -4,7 +4,7 @@ import (
 	"net"
 
 	db "github.com/nochzato/ticketopia-user-service/internal/db/sqlc"
-	pb "github.com/nochzato/ticketopia-user-service/internal/pb/user/v1"
+	pb "github.com/nochzato/ticketopia-user-service/pkg/pb/user/v1"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )

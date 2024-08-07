@@ -4,8 +4,8 @@ import (
 	"context"
 
 	db "github.com/nochzato/ticketopia-user-service/internal/db/sqlc"
-	pb "github.com/nochzato/ticketopia-user-service/internal/pb/user/v1"
 	"github.com/nochzato/ticketopia-user-service/pkg/hashpass"
+	pb "github.com/nochzato/ticketopia-user-service/pkg/pb/user/v1"
 	"github.com/nochzato/ticketopia-user-service/pkg/validator"
 	"google.golang.org/genproto/googleapis/rpc/errdetails"
 	"google.golang.org/grpc/codes"
