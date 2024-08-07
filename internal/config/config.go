@@ -5,13 +5,12 @@ import (
 )
 
 type Config struct {
-	Server   ServerConfig   `mapstructure:"server"`
-	Database DatabaseConfig `mapstructure:"database"`
+	GRPCServer GRPCServerConfig `mapstructure:"grpc_server"`
+	Database   DatabaseConfig   `mapstructure:"database"`
 }
 
-type ServerConfig struct {
-	Port int    `mapstructure:"port"`
-	Host string `mapstructure:"host"`
+type GRPCServerConfig struct {
+	Addr string `mapstructure:"addr"`
 }
 
 type DatabaseConfig struct {
